@@ -1,7 +1,11 @@
 function List() {
-  this.articles = [];
+  this.notes = [];
 };
 
-List.prototype.getList = function() {
-  return this.articles;
+List.prototype.getNotes = function() {
+  return this.notes;
+};
+
+List.prototype.addNote = function(note) {
+  this.notes.push(note);
 };
