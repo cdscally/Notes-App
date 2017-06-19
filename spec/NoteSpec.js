@@ -1,6 +1,6 @@
-function testCircleRadiusDefaultsTo10() {
-  var circle = new Circle();
-  assert.isTrue(circle.radius === 10);
+function testNoteCreation() {
+  var note = new Note("It is my birthday");
+  assert.isTrue(note.content === "It is my birthday");
 };
 
-testCircleRadiusDefaultsTo10();
+testNoteCreation();
