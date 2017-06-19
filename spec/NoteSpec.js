@@ -1,3 +1,4 @@
+
 function testNoteCreation() {
   describe('Creating a new note')
   var note = new Note("It is my birthday");
@@ -5,3 +6,4 @@ function testNoteCreation() {
 };
 
 testNoteCreation();
+
