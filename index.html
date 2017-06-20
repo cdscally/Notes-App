@@ -11,14 +11,12 @@
   <body>
     <script src="./src/view.js"></script>
     <h1> Awesome Note Collector</h1>
-    <form onsubmit="pageList.createNote(document.forms[0].elements[0].value);writeList();return false">
+    <form onsubmit="pageList.createNote(document.forms[0].elements[0].value); writeList();return false">
       Note:<br>
       <input type="text" name="note" value=""><br>
       <input type="submit" value="Submit">
     </form>
-
-
-    <p id="noteslist">
-    </p>
+    <ul id="noteslist">
+    </ul>
   </body>
 </html>

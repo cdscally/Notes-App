@@ -1,3 +1,8 @@
 var writeList = function() {
-  document.getElementById("noteslist").innerHTML = pageList.list();
+    var notesList = document.getElementById('noteslist')
+    var note = document.createElement('li');
+    note.innerHTML = pageList.list()[pageList.list().length -1];
+    notesList.appendChild(note);
+
+
 }
