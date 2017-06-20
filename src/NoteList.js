@@ -4,9 +4,9 @@ function NoteList() {
 
 NoteList.prototype.list = function() {
   var abbreviatedNotes = [];
-  for(i = 0; i < this.notes.length; i++) {
-    abbreviatedNotes.push(this.abbreviateNote(this.notes[i].content))
-  };
+  for (i = 0; i < this.notes.length; i++) {
+    abbreviatedNotes.push(this.abbreviateNote(this.notes[i].content));
+  }
   return abbreviatedNotes;
 };
 

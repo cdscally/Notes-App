@@ -2,21 +2,46 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
-
-    <script src="./src/NoteList.js"></script>
-    <script src="./src/Note.js"></script>
-    <script> var pageList = new NoteList() </script>
+    <title>Notes App</title>
+    <meta name="description" content="An awesome single page app done with Vanilla JavaScript. Week 7 Challenge at Makers Academy">
+    <meta name="author" content="Group 0 / May17 Cohort / Makers Academy">
   </head>
+  <!--Functionality-->
+  <script src="./src/NoteList.js"></script>
+  <script src="./src/Note.js"></script>
+  <script src="./src/View.js"></script>
+  <!--Styling-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/template.css">
   <body>
-    <script src="./src/view.js"></script>
-    <h1> Awesome Note Collector</h1>
-    <form onsubmit="pageList.createNote(document.forms[0].elements[0].value); writeList();return false">
-      Note:<br>
-      <input type="text" name="note" value=""><br>
-      <input type="submit" value="Submit">
-    </form>
-    <ul id="noteslist">
-    </ul>
+    <div class="wrapper">
+      <header>
+        <img class="logo" src="img/logo@2x.png" alt="Notes App Logo">
+      </header>
+      <section>
+        <section class="notes-list-wrapper">
+          <h2>Notes</h2>
+          <ul id="notes-list">
+          </ul>
+        </section>
+
+        <div class="create-new-note">
+          <form onsubmit="submitNote(); return false;" class="note-form">
+            <label class="form-label" for="content">Create Note:</label>
+            <textarea class="note-content-input" name="content" rows="4"></textarea>
+            <button class="btn btn-submit" type="submit" name="save-note">Save Note</button>
+          </form>
+        </div>
+
+        <div class="note-wrapper">
+          <div class="note-content">
+            <p id="note-content"></p>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
   </body>
 </html>
