@@ -2,6 +2,7 @@ var pageList = new NoteList();
 
 var submitNote = function() {
   pageList.createNote(document.forms[0].elements[0].value);
+  document.forms[0].elements[0].value = ""
   writeList();
 };
 
