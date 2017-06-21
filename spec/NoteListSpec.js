@@ -1,37 +1,23 @@
-console.log('List of Notes');
+describe('Note List', function() {
 
-console.log('Notes List exists');
+  var noteList = new NoteList();
 
-var noteList = new NoteList();
+  it('Can create a new note list', function() {
+    expect(noteList).toBeDefined();
+  });
 
-function canCreateNewList() {
-  assert.isTrue(noteList);
-}
+  it('Starts with empty list', function() {
+    expect(noteList.list().length).toEqual(0);
+  });
 
-console.log('List is an object');
-function getNotesReturnsAnObject() {
-  assert.isTrue(typeof noteList.list() == 'object');
-}
+  it('Can add note to list', function() {
+    noteList.createNote('article');
+    expect(noteList.list()[0].content).toEqual('article');
+  });
 
-console.log('List starts empty');
-function getNotesStartsEmpty() {
-  assert.isTrue(noteList.list().length == 0);
-}
-
-console.log('Can add note to list');
-function addNoteToList() {
-  noteList.createNote('article');
-  assert.isTrue(noteList.list()[0].content == 'article');
-}
-
-console.log('Abbreviates all notes to 20 characters');
-function abbreviateNote() {
-  noteList.createNote('Lorem ipsum dolor sit amet.');
-  assert.isTrue(noteList.abbreviateNote(noteList.notes[1].content).length == 20)
-}
-
-canCreateNewList();
-getNotesReturnsAnObject();
-getNotesStartsEmpty();
-addNoteToList();
-abbreviateNote()
+  it('Abbreviates all notes to 20 characters', function() {
+    noteList.createNote('Lorem ipsum dolor sit amet.');
+    expect(noteList.abbreviateNote(noteList.notes[1].content).length).toEqual(20);
+  });
+  
+});
