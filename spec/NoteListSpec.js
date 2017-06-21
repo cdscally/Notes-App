@@ -12,7 +12,7 @@ describe('Note List', function() {
 
   it('Can add note to list', function() {
     noteList.createNote('article');
-    expect(noteList.list()[0].content).toEqual('article');
+    expect(noteList.notes[0].content).toEqual('article');
   });
 
   it('Abbreviates all notes to 20 characters', function() {
