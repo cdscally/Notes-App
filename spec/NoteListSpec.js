@@ -19,5 +19,5 @@ describe('Note List', function() {
     noteList.createNote('Lorem ipsum dolor sit amet.');
     expect(noteList.abbreviateNote(noteList.notes[1].content).length).toEqual(20);
   });
-  
+
 });
