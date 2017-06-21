@@ -1,9 +1,12 @@
 var pageList = new NoteList();
 
 var submitNote = function() {
-  pageList.createNote(document.forms[0].elements[0].value);
-  document.forms[0].elements[0].value = '';
-  writeList();
+  text = document.forms[0].elements[0].value
+  if (text.length > 0) {
+    pageList.createNote(document.forms[0].elements[0].value);
+    document.forms[0].elements[0].value = '';
+    writeList();
+  }
 };
 
 var writeList = function() {
