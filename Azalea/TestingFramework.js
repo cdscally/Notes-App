@@ -7,7 +7,7 @@ function expect(testvalue) {
   var errorMessage;
 
   function toEqual(actualvalue) {
-    if (testvalue !== actualvalue) {
+    if(testvalue !== actualvalue) {
       failures++;
       errorMessage = ` - Expected "${testvalue}" to equal "${actualvalue}".`;
       runErrorProcess();
@@ -31,7 +31,7 @@ function expect(testvalue) {
   };
 
   function toBeDefined() {
-    if (void 0 == testvalue) {
+    if(void 0 == testvalue) {
       failures++;
       errorMessage = ` - Expected ${testvalue} to be defined.`
       runErrorProcess();
